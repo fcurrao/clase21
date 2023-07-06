@@ -1,0 +1,33 @@
+<h1> MI carrito: {{cartId}} </h1> <button onclick="home()"> HOME</button>
+<div style="border: 1px solid #000; border-radius: 1rem; padding: 1rem; margin-bottom: 1rem">
+
+  
+
+{{#each productosEnCarritos}}  
+  <p> Producto ID: {{this._id}} </p>
+  <p> Producto : {{this.title}} </p>
+  <p> Stock: {{this.stock}} </p>
+  <p> Price {{this.price}} </p>
+  <p> Cantidad: {{this.other}} </p>
+  <p> Subtotal: {{this.other2}} </p>
+ 
+  <button onclick="borrarProducto( {{this.other3}})">Borrar producto  </button> <br>
+  <input id="{{this.other3}}">
+  <button onclick="cambiarCantidad({{this.other3}})">Cambiar cantidad  </button>
+
+  <br>--------------------------------------------<br>
+  {{/each}} 
+
+  <h2>TOTAL: {{totalCarrito}}</h2>
+ 
+
+  {{!-- {{#each cart}}
+  <p> Producto ID: {{this.product}} </p> 
+  <br>--------------------------------------------<br>
+  {{/each}}    --}}
+
+
+  <button onclick="borrarCarrito({{cartIdJSON}})">Borrar Carrito  </button>
+</div> 
+
+<script src="/js/web.js"></script>

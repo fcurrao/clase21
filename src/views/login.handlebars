@@ -1,0 +1,20 @@
+<div>
+    <h1>Login</h1> <button onclick="home()"> HOME</button>
+    <div>
+    <a href='/api/sessions/github'><button>entrar con github</button></a>
+</div>
+    <form id="loginForm"> 
+        <label>Email</label>
+        <input name="email">
+        <br/>
+        <label>Contraseña</label>
+        <input type="password" name="password">
+        <input type="submit">
+    </form>
+    <p>¿Olvidaste tu contraseña? <a href="/restartPassword">Restáurala aquí</a></p>
+        
+    <p>¿No estás registrado? <a href="/register">Regístrate aquí</a></p>
+</div>
+<script src="/js/login.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/web.js"></script>

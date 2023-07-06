@@ -1,0 +1,48 @@
+<h1>Formulario para agregar un producto </h1>
+<button onclick="home()"> HOME</button>
+<form action="" id="add-product-form">
+    <label>Título:</label>
+    <input style="margin-bottom: 0.5rem" id="title">
+    <br>
+
+    <label>Descripción:</label>
+    <input style="margin-bottom: 0.5rem" id="description">
+    <br>
+
+    <label>Precio:</label>
+    <input type="number" style="margin-bottom: 0.5rem" id="price">
+    <br>
+
+    {{!-- <label>URL de la miniatura:</label>
+    <input id="thumbnails">
+    <br> --}}
+
+    <label>Code:</label>
+    <input style="margin-bottom: 0.5rem" id="code">
+    <br>
+
+    <label>Stock:</label>
+    <input style="margin-bottom: 0.5rem" id="stock">
+    <br>
+
+    <label>Categoría:</label>
+    <input style="margin-bottom: 0.5rem" id="category">
+    <br>
+
+    <label>Status:</label>
+    <input style="margin-bottom: 0.5rem" id="status">
+    <br>
+
+    <button type="submit" id="add-product-btn">Agregar producto</button>
+    
+</form>
+
+<h1>Productos en tiempo real: </h1>
+<div id="products-container">
+  {{!-- Aca van los productos --}}
+  
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>

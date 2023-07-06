@@ -1,0 +1,30 @@
+
+{{ texto }}
+<P>{{texto2}}</P>
+ {{user.name}} {{texto3}} {{user.email}}
+
+<h1>Productos: </h1> 
+<button onclick="home()"> HOME</button>
+<button onclick="cartsId()"> My Carrito </button>
+<button onclick="logout()"> logOuT </button>
+ {{#each listaProductos}}
+<div style="border: 1px solid #000; border-radius: 1rem; padding: 1rem; margin-bottom: 1rem">
+  <p> Title: {{this.title}} </p>
+  <p> Description: {{this.description}} </p>
+  <p> Price: {{this.price}} </p>
+  <p> Stock: {{this.stock}} </p>
+  {{!-- <button onclick="addProductToCart( "6487ad36edaadc46114c63c1",  {{this.id}})">AGREGAR AL CARRITO </button>  --}}
+  
+   
+   <button  onclick="agregarAlCarrito({{this.other3}})">AGREGAR AL CARRITO </button> 
+</div>
+
+{{/each}} 
+
+
+<a href={{prev}}>PREVIO</a> 
+<a href={{next}}>NEXT</a>  
+  
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>  
+<script src="/js/web.js"></script>  
